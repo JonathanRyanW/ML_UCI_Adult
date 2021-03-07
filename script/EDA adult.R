@@ -1,5 +1,5 @@
 url <- "https://archive.ics.uci.edu/ml/datasets/adult"
-data <- read.csv("adult_sal.csv")
+data <- read.csv("./data/adult_sal.csv")
 
 library(dplyr)
 library(ggplot2)
@@ -17,13 +17,6 @@ the adult was not willing to divulge his/her employer."
 
 unique(data$occupation)
 "There are 15 different types of occupation."
-
-table(data$relationship)
-"There are 6 types of realtionship. I'm not exactly sure what this values means.
-Oh, on closer inspection i think i get it. This is their role in the family.
-There are some questions though, the ownchild value, does everyone who own a
-child still live with their spouse? what if some of them split up or divorced?
-"
 
 'Most of the values of capital gain and capital loss are 0. I am not sure if
 these variables can even be used to predict the income variable.'

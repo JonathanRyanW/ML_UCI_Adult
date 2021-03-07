@@ -12,11 +12,11 @@ education_num seems to have been ordered ascending from preschool to masters.
 The important numbers are 9 (High school), 10(Some college), 13(Bachelor),
 14(Master), 16(Doctorate)"
 
-ggplot(data, aes(x = education_num)) +
+ggplot(data, aes(x = reorder(education_num, education_num, function(x) - length(x)))) +
   geom_bar(aes(fill = income)) +
   theme_bw()
 
-ggplot(data, aes(x = education)) +
+ggplot(data, aes(x = reorder(education, education, function(x) - length(x)))) +
   geom_bar(aes(fill = income)) +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 60, vjust = 0.5, hjust=0.35))
