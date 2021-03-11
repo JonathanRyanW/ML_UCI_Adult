@@ -1,5 +1,5 @@
 url <- "https://archive.ics.uci.edu/ml/datasets/adult"
-data <- read.csv("adult_sal.csv")
+data <- read.csv("./data/adult_sal.csv")
 
 library(dplyr)
 library(ggplot2)

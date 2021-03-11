@@ -86,6 +86,7 @@ new.confusion.matrix[2,1] <- fn
 new.confusion.matrix[2,2] <- tp
 
 new.confusion.matrix.percentage <- confusion.matrix / sum(tn, tp, fn, fp)
+new.accuracy <- new.confusion.matrix[1,1] + new.confusion.matrix[2,2]
 
 "The new model is sligthly better than the previous one! The step function
 worked!"
